@@ -279,6 +279,7 @@ function extractDownload(filePath) {
         console.error('Error extracting archive')
         deferred.reject(err)
       } else {
+        fs.chmodSync(extractedPath +'/phantomjs', '0777')
         deferred.resolve(extractedPath)
       }
     })
