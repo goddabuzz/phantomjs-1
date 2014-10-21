@@ -202,7 +202,7 @@ function getRequestOptions(conf) {
     options.headers['User-Agent'] = 'curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5'
   }
 
-  options.rejectUnauthorized = conf.get('strict-ssl');
+  options.strictSSL = conf.get('strict-ssl');
 
   return options
 }
