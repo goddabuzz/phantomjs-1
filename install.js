@@ -22,7 +22,7 @@ var util = require('util')
 var which = require('which')
 
 var cdnUrl = process.env.PHANTOMJS_CDNURL || 'http://r.cnpmjs.org/phantomjs/download'
-var downloadUrl = cdnUrl + '/phantomjs-' + helper.version + '-'
+var downloadUrl = cdnUrl + '/phantomjs-' + helper.version + '.tgz'
 
 var originalPath = process.env.PATH
 
@@ -79,13 +79,13 @@ whichDeferred.promise
 
     // Can't use a global version so start a download.
     if (process.platform === 'linux' && process.arch === 'x64') {
-      downloadUrl += 'linux-x86_64.tar.bz2'
+//      downloadUrl += 'linux-x86_64.tar.bz2'
     } else if (process.platform === 'linux') {
-      downloadUrl += 'linux-i686.tar.bz2'
+//      downloadUrl += 'linux-i686.tar.bz2'
     } else if (process.platform === 'darwin' || process.platform === 'openbsd' || process.platform === 'freebsd') {
-      downloadUrl += 'macosx.zip'
+//      downloadUrl += 'macosx.zip'
     } else if (process.platform === 'win32') {
-      downloadUrl += 'windows.zip'
+//      downloadUrl += 'windows.zip'
     } else {
       console.error('Unexpected platform or architecture:', process.platform, process.arch)
       exit(1)
