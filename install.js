@@ -274,7 +274,7 @@ function extractDownload(filePath) {
 
   } else {
     console.log('Extracting tar contents (via spawned process)')
-    cp.execFile('tar', ['jxf', filePath], options, function (err, stdout, stderr) {
+    cp.execFile('tar', ['xf', filePath], options, function (err, stdout, stderr) {
       if (err) {
         console.error('Error extracting archive')
         deferred.reject(err)
