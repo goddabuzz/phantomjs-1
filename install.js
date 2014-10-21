@@ -21,7 +21,7 @@ var url = require('url')
 var util = require('util')
 var which = require('which')
 
-var cdnUrl = process.env.PHANTOMJS_CDNURL || 'http://cnpmjs.org/downloads'
+var cdnUrl = process.env.PHANTOMJS_CDNURL || 'http://r.cnpmjs.org/phantomjs/download'
 var downloadUrl = cdnUrl + '/phantomjs-' + helper.version + '-'
 
 var originalPath = process.env.PATH
